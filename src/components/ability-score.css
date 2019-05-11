@@ -1,0 +1,15 @@
+.header {
+  color: grey;
+  font-size: 10px;
+}
+
+.ability-score {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0 !important;
+  margin: 0 0 15px 0 !important;
+}
+
+.ability-score div {
+    padding: 2px 0 !important;
+}

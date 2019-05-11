@@ -1,0 +1,35 @@
+.skills {
+  font-size: 12px;
+  padding: 0 !important;
+}
+
+.prof {
+  width: 15%;
+  text-align: center;
+}
+
+.mod {
+  width: 15%;
+  border-bottom: 1px solid lightgrey;
+}
+
+.skill {
+  width: 50%;
+  min-width: 80px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.bonus {
+  width: 15%;
+  border-bottom: 1px solid lightgrey;
+  text-align: right;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.skill-header {
+  font-size: 10px;
+  color: grey;
+}

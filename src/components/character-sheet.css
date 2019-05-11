@@ -1,0 +1,42 @@
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.character-sheet {
+  margin: 0 !important;
+  height: 100vh;
+}
+
+.header {
+  color: grey;
+  font-size: 12px;
+}
+
+.left {
+  width: 33%;
+  display: inline-block;
+}
+
+.middle {
+  width: 33%;
+}
+
+.right {
+  width: 33%;
+}
+
+.secondary-stats {
+  vertical-align: top;
+  width: 75%;
+  display: inline-block;
+  padding: 0 15px !important;
+}
+
+.primary-stats {
+  vertical-align: top;
+  width: 25%;
+  display: inline-block;
+  padding: 0 !important;
+}

@@ -1,0 +1,23 @@
+.character-details {
+  width: 70%;
+  height: 100%;
+  margin: 0 !important;
+}
+
+.character-details ul {
+  margin: 0;
+}
+
+.character-details li div {
+  width: 33%;
+  display: inline-block;
+}
+
+.headerBelow {
+  border-top: 1px solid lightgrey;
+}
+
+.character-details li div span {
+  font-weight: bold;
+  font-size: 14px;
+}

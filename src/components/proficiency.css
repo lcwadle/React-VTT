@@ -1,0 +1,22 @@
+.proficiency {
+  padding: 0 !important;
+}
+
+.proficiency ul {
+  list-style: none;
+}
+
+.proficiency li div {
+  display: inline-block;
+}
+
+.value {
+  font-size: 16px;
+  font-weight: bold;
+  width: 30%;
+  padding-left: 40px;
+}
+
+.label {
+  width: 70%;
+}

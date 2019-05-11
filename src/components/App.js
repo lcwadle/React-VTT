@@ -1,9 +1,14 @@
 import React from 'react';
+import Story from './Story';
+import CharacterSheet from './CharacterSheet';
+import './dm-screen.css';
 
 class App extends React.Component {
   render() {
     return (
-      <div>Dungeons and Dragons VTT</div>
+      <div>
+        <CharacterSheet />
+      </div>
     );
   }
 }

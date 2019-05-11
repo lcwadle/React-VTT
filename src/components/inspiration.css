@@ -1,0 +1,22 @@
+.inspiration {
+  padding: 0 !important;
+}
+
+.inspiration ul {
+  list-style: none;
+}
+
+.inspiration li div {
+  display: inline-block;
+}
+
+.value {
+  font-size: 16px;
+  font-weight: bold;
+  width: 30%;
+  padding-left: 40px;
+}
+
+.label {
+  width: 70%;
+}
