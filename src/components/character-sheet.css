@@ -1,3 +1,7 @@
+#root {
+  height: 100%;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -6,12 +10,12 @@ ul {
 
 .character-sheet {
   margin: 0 !important;
-  height: 100vh;
+  height: 100%;
 }
 
 .header {
   color: grey;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .left {
@@ -21,10 +25,12 @@ ul {
 
 .middle {
   width: 33%;
+  display: inline-block;
 }
 
 .right {
   width: 33%;
+  display: inline-block;
 }
 
 .secondary-stats {
@@ -42,6 +48,6 @@ ul {
 }
 
 .modifier-large {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
 }

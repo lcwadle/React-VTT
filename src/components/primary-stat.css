@@ -1,0 +1,15 @@
+.primary-stat {
+  display: inline-block;
+  width: 11%;
+  height: 100%;
+  margin: 15px 15px 0 0 !important;
+  padding: 5px 0 !important;
+}
+
+.primary-stat ul {
+  height: 100%;
+}
+
+.primary-stat li {
+  text-align: center;
+}

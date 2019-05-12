@@ -1,16 +1,16 @@
 import React from 'react';
-import './speed.css';
+import './primary-stat.css';
 
-class Speed extends React.Component {
+class PrimaryStat extends React.Component {
   render() {
     return (
-      <div className='initiative ui segment'>
+      <div className='primary-stat ui segment'>
         <ul>
           <li className='modifier-large'>
-            {` ${this.props.value} ft.`}
+            {this.props.value}
           </li>
           <li className='header'>
-            Speed
+            {this.props.name}
           </li>
         </ul>
       </div>
@@ -18,4 +18,4 @@ class Speed extends React.Component {
   }
 }
 
-export default Speed;
+export default PrimaryStat;

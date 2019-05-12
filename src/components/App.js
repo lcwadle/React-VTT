@@ -6,9 +6,7 @@ import './dm-screen.css';
 class App extends React.Component {
   render() {
     return (
-      <div>
-        <CharacterSheet />
-      </div>
+      <CharacterSheet />
     );
   }
 }

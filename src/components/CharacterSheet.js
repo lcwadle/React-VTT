@@ -5,10 +5,7 @@ import Inspiration from './Inspiration';
 import Proficiency from './Proficiency';
 import Saves from './Saves';
 import Skills from './Skills';
-import Initiative from './Initiative';
-import Speed from './Speed';
-import HitPoints from './HitPoints';
-import TempHitPoints from './TempHitPoints';
+import PrimaryStat from './PrimaryStat';
 import './character-sheet.css';
 
 class CharacterSheet extends React.Component {
@@ -25,6 +22,7 @@ class CharacterSheet extends React.Component {
     currentHitPoints: 100,
     maxHitPoints: 120,
     tempHitPoints: 10,
+    armorClass: 13,
     abilityScores: [
       {
         name: 'Strength',
@@ -179,6 +177,14 @@ class CharacterSheet extends React.Component {
     return parseInt(level / 4 + 2);
   }
 
+  addPlusToBonus(bonus) {
+    if (bonus >= 0) {
+      return '+' + bonus;
+    }
+
+    return bonus;
+  }
+
   render() {
     return (
       <div className='character-sheet ui segment'>
@@ -192,10 +198,26 @@ class CharacterSheet extends React.Component {
           experiencePoints={this.state.experiencePoints}
         />
         <div>
-          <Initiative value={this.state.initiative}/>
-          <Speed value={this.state.speed} />
-          <HitPoints current={this.state.currentHitPoints} max={this.state.maxHitPoints} />
-          <TempHitPoints value={this.state.tempHitPoints} />
+          <PrimaryStat
+            value={this.addPlusToBonus(this.state.initiative)}
+            name='Initiative'
+          />
+          <PrimaryStat
+            value={`${this.state.speed} ft.`}
+            name='Speed'
+          />
+          <PrimaryStat
+            value={this.state.armorClass}
+            name='Armor Class'
+          />
+          <PrimaryStat
+            value={`${this.state.currentHitPoints}/${this.state.maxHitPoints}`}
+            name='Hit Points'
+          />
+          <PrimaryStat
+            value={this.state.tempHitPoints}
+            name='Temp. Hit Points'
+          />
         </div>
         <div className='left ui segment'>
           <div className='primary-stats'>
@@ -212,6 +234,8 @@ class CharacterSheet extends React.Component {
               prof={this.calcProficiencyBonus(this.state.level)}
             />
           </div>
+        </div>
+        <div className='middle ui segment'>
         </div>
       </div>
     );
