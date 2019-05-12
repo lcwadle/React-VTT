@@ -1,0 +1,9 @@
+.hit-points {
+  display: inline-block;
+  width: 16%;
+  margin: 15px 15px 0 0 !important;
+}
+
+.hit-points li {
+  text-align: center;
+}

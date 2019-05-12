@@ -28,7 +28,7 @@ class Save extends React.Component {
           {this.props.stat.name}
         </div>
         <div className='inline row bonus'>
-          {this.addPlusToBonus(this.props.stat.bonus)}
+          {this.addPlusToBonus(this.props.stat.prof ? this.props.stat.bonus + this.props.prof : this.props.stat.bonus)}
         </div>
       </li>
     );

@@ -7,7 +7,7 @@ class Proficiency extends React.Component {
       <div className='proficiency ui segment'>
         <ul>
           <li>
-            <div className='value'>1</div>
+            <div className='value'>{`+ ${this.props.value}`}</div>
             <div className='label'>Proficiency Bonus</div>
           </li>
         </ul>

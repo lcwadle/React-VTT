@@ -40,3 +40,8 @@ ul {
   display: inline-block;
   padding: 0 !important;
 }
+
+.modifier-large {
+  font-size: 20px;
+  font-weight: bold;
+}

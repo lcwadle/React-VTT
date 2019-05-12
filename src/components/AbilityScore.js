@@ -16,10 +16,10 @@ class AbilityScore extends React.Component {
         <div className='header'>
           {this.props.stat.name}
         </div>
-        <div style={{fontWeight: 'bold', fontSize: '20px'}}>
+        <div className='modifier-large'>
           {this.addPlusToBonus(this.props.stat.bonus)}
         </div>
-        <div style={{fontWeight: 'bold'}}>
+        <div>
           {this.props.stat.score}
         </div>
       </div>

@@ -1,0 +1,9 @@
+.initiative {
+  display: inline-block;
+  width: 16%;
+  margin: 15px 15px 0 0 !important;
+}
+
+.initiative li {
+  text-align: center;
+}
