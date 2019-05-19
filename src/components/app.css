@@ -24,3 +24,31 @@
   margin: 15px !important;
   padding: 15px 40px !important;
 }
+
+.header-link {
+  padding: 0 20px;
+  border-left: 1px solid lightgrey;
+  display: inline-block;
+}
+
+.menu-item {
+  display: inline-block;
+  color: black;
+}
+
+.header-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.header-main {
+  min-width: 300px;
+  width: 25%;
+  text-align: center;
+}
+
+.login {
+  float: right;
+  padding-right: 40px;
+}
