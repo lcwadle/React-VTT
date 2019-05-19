@@ -2,10 +2,10 @@ import React from 'react';
 import CharacterInfo from './CharacterInfo';
 import AbilityScores from './AbilityScores';
 import Inspiration from './Inspiration';
-import Proficiency from './Proficiency';
 import Saves from './Saves';
 import Skills from './Skills';
 import PrimaryStat from './PrimaryStat';
+import Actions from './Actions';
 import './character-sheet.css';
 
 class CharacterSheet extends React.Component {
@@ -199,12 +199,16 @@ class CharacterSheet extends React.Component {
         />
         <div>
           <PrimaryStat
-            value={this.addPlusToBonus(this.state.initiative)}
-            name='Initiative'
+            value={this.addPlusToBonus(this.calcProficiencyBonus(this.state.level))}
+            name='Proficiency Bonus'
           />
           <PrimaryStat
             value={`${this.state.speed} ft.`}
             name='Speed'
+          />
+          <PrimaryStat
+            value={this.addPlusToBonus(this.state.initiative)}
+            name='Initiative'
           />
           <PrimaryStat
             value={this.state.armorClass}
@@ -218,13 +222,16 @@ class CharacterSheet extends React.Component {
             value={this.state.tempHitPoints}
             name='Temp. Hit Points'
           />
+          <PrimaryStat
+            value={this.state.level}
+            name='Hit Dice'
+          />
         </div>
         <div className='left ui segment'>
           <div className='primary-stats'>
             <AbilityScores abilityScores={this.state.abilityScores} />
           </div>
           <div className='secondary-stats'>
-            <Proficiency value={this.calcProficiencyBonus(this.state.level)}/>
             <Saves
               abilityScores={this.state.abilityScores}
               prof={this.calcProficiencyBonus(this.state.level)}
@@ -236,6 +243,7 @@ class CharacterSheet extends React.Component {
           </div>
         </div>
         <div className='middle ui segment'>
+          <Actions />
         </div>
       </div>
     );

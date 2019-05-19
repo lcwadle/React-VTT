@@ -1,12 +1,11 @@
 import React from 'react';
-import Story from './Story';
-import CharacterSheet from './CharacterSheet';
-import './dm-screen.css';
+import PageRender from './PageRender';
+import './app.css';
 
 class App extends React.Component {
   render() {
     return (
-      <CharacterSheet />
+      <PageRender />
     );
   }
 }
