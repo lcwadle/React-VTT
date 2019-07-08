@@ -4,17 +4,17 @@
 }
 
 .prof {
-  width: 15%;
+  width: 30%;
   text-align: center;
 }
 
 .mod {
-  width: 15%;
+  width: 10%;
   border-bottom: 1px solid lightgrey;
 }
 
 .skill {
-  width: 50%;
+  width: 25%;
   min-width: 80px;
   border-bottom: 1px solid lightgrey;
 }

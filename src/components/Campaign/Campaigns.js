@@ -1,27 +1,35 @@
 import React from 'react';
-import Campaign from './Campaign';
-import './campaigns.css';
+
+function Campaign({campaign}) {
+    return <button className='inner-tile ui segment'>{campaign}</button>;
+}
 
 class Campaigns extends React.Component {
   state = {
     campaigns: [
       {
-        name: 'Horde of the Dragon Queen'
+        name: 'Horde of the Dragon Queen',
+        id: 1
       },
       {
-        name: 'Rise of Tiamat'
+        name: 'Rise of Tiamat',
+        id: 2
       },
       {
-        name: 'Waterdeep: Dungeon of the Mad Mage'
+        name: 'Waterdeep: Dungeon of the Mad Mage',
+        id: 3
       },
       {
-        name: 'Waterdeep: Dungeon of the Mad Mage'
+        name: 'Waterdeep: Dungeon of the Mad Mage',
+        id: 4
       },
       {
-        name: 'Waterdeep: Dungeon of the Mad Mage'
+        name: 'Waterdeep: Dungeon of the Mad Mage',
+        id: 5
       },
       {
-        name: 'Waterdeep: Dungeon of the Mad Mage'
+        name: 'Waterdeep: Dungeon of the Mad Mage',
+        id: 6
       }
     ]
   }
@@ -31,7 +39,7 @@ class Campaigns extends React.Component {
       <div>
         <div className='tiles'>
           {this.state.campaigns.map((campaign) => (
-            <Campaign name={campaign.name} />
+            <Campaign campaign={campaign.name} key={campaign.id} />
           ))}
         </div>
       </div>

@@ -19,7 +19,7 @@ class CharacterDetails extends React.Component {
             </div>
             <div>
               <span>
-                {this.props.race}
+                {this.props.ancestry}
               </span>
             </div>
           </li>

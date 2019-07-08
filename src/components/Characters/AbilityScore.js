@@ -17,7 +17,7 @@ class AbilityScore extends React.Component {
           {this.props.stat.name}
         </div>
         <div className='modifier-large'>
-          {this.addPlusToBonus(this.props.stat.bonus)}
+          {this.addPlusToBonus(Math.floor((this.props.stat.score - 10) / 2))}
         </div>
         <div>
           {this.props.stat.score}
