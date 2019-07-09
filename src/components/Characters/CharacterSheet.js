@@ -50,7 +50,7 @@ class CharacterSheet extends React.Component {
     const character = {
       name: 'Elon Muskhollow',
       class: 'Bard',
-      level: 1,
+      level: 15,
       ancestry: 'Half-Elf',
       background: 'Entertainer',
       alignment: 'Chaotic Good',
@@ -253,12 +253,17 @@ class CharacterSheet extends React.Component {
           background={this.state.background}
           experiencePoints={this.state.experiencePoints}
         />
-        <div className='left ui segment'>
+        <div className='left'>
           <div className='primary-stats'>
+            <div className='header center'>
+              Ability Scores
+            </div>
             <AbilityScores abilityScores={this.state.abilityScores} />
           </div>
           <div className='secondary-stats'>
-            <h5>Skills</h5>
+            <div className='header center'>
+              Skills
+            </div>
             <Skills
               skills={this.state.skills}
             />

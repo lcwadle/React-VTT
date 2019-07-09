@@ -1,27 +1,24 @@
 .skills {
   font-size: 12px;
-  padding: 0 !important;
+  padding: 0 10px !important;
+  margin: 0 !important;
 }
 
 .prof {
-  width: 30%;
+  width: 70px;
   text-align: center;
 }
 
 .mod {
-  width: 10%;
-  border-bottom: 1px solid lightgrey;
+  width: 40px;
 }
 
 .skill {
-  width: 25%;
-  min-width: 80px;
-  border-bottom: 1px solid lightgrey;
+  width: 100px;
 }
 
 .bonus {
-  width: 15%;
-  border-bottom: 1px solid lightgrey;
+  width: 50px;
   text-align: right;
 }
 
@@ -29,7 +26,23 @@
   display: inline-block;
 }
 
-.skill-header {
-  font-size: 10px;
-  color: grey;
+i {
+  margin: 0 !important;
+}
+
+.temp {
+  margin-bottom: -6px;
+  text-align: center;
+  font-size: 9px;
+}
+
+.profLabel {
+  margin: 0 3.2px;
+}
+
+.border {
+  margin: 5px !important;
+  padding: 0 5px !important;
+  text-align: center;
+  font-weight: bold;
 }

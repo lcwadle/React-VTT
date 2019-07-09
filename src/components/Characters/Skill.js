@@ -6,7 +6,7 @@ class Skill extends React.Component {
     switch(prof) {
       case 1:
         return (
-          <div className='inline row prof'>
+          <div>
             <i className='circle icon' />
             <i className='circle outline icon' />
             <i className='circle outline icon' />
@@ -15,7 +15,7 @@ class Skill extends React.Component {
         );
       case 2:
         return (
-          <div className='inline row prof'>
+          <div>
             <i className='circle outline icon' />
             <i className='circle icon' />
             <i className='circle outline icon' />
@@ -24,7 +24,7 @@ class Skill extends React.Component {
         );
       case 3:
         return (
-          <div className='inline row prof'>
+          <div>
             <i className='circle outline icon' />
             <i className='circle outline icon' />
             <i className='circle icon' />
@@ -33,7 +33,7 @@ class Skill extends React.Component {
         );
       case 4:
         return (
-          <div className='inline row prof'>
+          <div>
             <i className='circle outline icon' />
             <i className='circle outline icon' />
             <i className='circle outline icon' />
@@ -42,7 +42,7 @@ class Skill extends React.Component {
         );
       default:
         return (
-          <div className='inline row prof'>
+          <div className='row'>
             <i className='circle outline icon' />
             <i className='circle outline icon' />
             <i className='circle outline icon' />
@@ -81,15 +81,24 @@ class Skill extends React.Component {
         <div className='inline row skill'>
           {this.props.skill.name}
         </div>
-        <div className='inline row mod'>
-          {this.props.skill.modName}
+        <div className='inline row prof'>
+          <div className='row temp'>
+            <span className='profLabel'>T</span>
+            <span className='profLabel'>E</span>
+            <span className='profLabel'>M</span>
+            <span className='profLabel'>L</span>
+          </div>
+          {this.proficiencyBubbles(this.props.skill.prof)}
         </div>
         <div className='inline row mod'>
-          {this.addPlusToBonus(this.props.skill.modValue)}
+          <div className='border'>
+            {this.addPlusToBonus(this.props.skill.modValue)}
+          </div>
         </div>
-        {this.proficiencyBubbles(this.props.skill.prof)}
-        <div className='inline row bonus'>
-          {this.addPlusToBonus(this.proficiencyBonus(this.props.skill.prof, this.props.skill.level))}
+        <div className='inline row mod'>
+          <div className='row temp'>
+            {this.props.skill.modName}
+          </div>
         </div>
       </li>
     );
