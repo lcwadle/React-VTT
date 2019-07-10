@@ -2,7 +2,6 @@ import React from 'react';
 import CharacterInfo from './CharacterInfo';
 import AbilityScores from './AbilityScores';
 import Inspiration from './Inspiration';
-import Saves from './Saves';
 import Skills from './Skills';
 import PrimaryStat from './PrimaryStat';
 import Actions from './Actions';
