@@ -24,7 +24,8 @@ class CharacterSheet extends React.Component {
     tempHitPoints: 0,
     armorClass: 0,
     abilityScores: [],
-    skills: []
+    skills: [],
+    savingThrows: []
   }
 
   getAbilityModifier(ability, abilityScores) {
@@ -69,11 +70,23 @@ class CharacterSheet extends React.Component {
         wisdom: 13,
         charisma: 19
       },
-      savingThrows: {
-        fortitude: 0,
-        reflex: 2,
-        will: 1
-      },
+      savingThrows: [
+        {
+          name: 'Fortitude',
+          value: 0,
+          ability: 'CON'
+        },
+        {
+          name: 'Reflex',
+          value: 1,
+          ability: 'DEX'
+        },
+        {
+          name: 'Will',
+          value: 2,
+          ability: 'WIS'
+        }
+      ],
       skills: [
         {
           name: 'Perception',
@@ -189,20 +202,15 @@ class CharacterSheet extends React.Component {
         touchArmorClass: character.touchArmorClass,
         heroPoints: character.heroPoints,
       },
-      savingThrows: [
+      savingThrows: character.savingThrows.map(save => (
         {
-          name: 'Fortitude',
-          score: character.savingThrows.fortitude
-        },
-        {
-          name: 'Reflex',
-          score: character.savingThrows.reflex
-        },
-        {
-          name: 'Will',
-          score: character.savingThrows.will
+          prof: save.value,
+          name: save.name,
+          modName: save.ability,
+          modValue: this.getAbilityModifier(save.ability, character.abilityScores),
+          level: character.level
         }
-      ],
+      )),
       abilityScores: [
         {
           name: 'Strength',
@@ -264,13 +272,16 @@ class CharacterSheet extends React.Component {
             <div className='header center'>
               Skills
             </div>
-            <Skills
-              skills={this.state.skills}
-            />
+            <Skills skills={this.state.skills} />
           </div>
         </div>
-        <div className='middle ui segment'>
-          <Actions />
+        <div className='middle'>
+          <div className='secondary-stats'>
+            <div className='header center'>
+              Saving Throws
+            </div>
+            <Skills skills={this.state.savingThrows} />
+          </div>
         </div>
       </div>
     );

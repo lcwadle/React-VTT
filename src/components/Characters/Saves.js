@@ -7,16 +7,8 @@ class Saves extends React.Component {
     return (
       <div className='saves ui segment'>
         <ul>
-          <li className='save-header'>
-            <div className='inline prof'>PROF</div>
-            <div className='inline save'>SAVE</div>
-            <div className='inline bonus'>BONUS</div>
-          </li>
-          {this.props.abilityScores.map((abilityScore) => (
-            <Save
-              stat={abilityScore}
-              prof={this.props.prof}
-            />
+          {this.props.saves.map((save) => (
+            <Save stat={save} />
           ))}
         </ul>
       </div>
